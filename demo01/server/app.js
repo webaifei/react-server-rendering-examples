@@ -33,7 +33,7 @@ app.listen(8080, function (err){
 })
 
 function handleFn(req, res){
-  //fetch data
+  // fetch data
   callApi('https://s.jdpay.com/sku/queryTodaySaleSkuList').then((json)=>{
     var initialState = {
       list: json.data.page.data

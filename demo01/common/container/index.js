@@ -10,9 +10,11 @@ class App extends Component{
   }
   componentWillMount(){
     const {list, initList} = this.props;
-    if(!list.length){
-
-    }
+    // if(!global.window){
+    //   callApi('https://s.jdpay.com/sku/queryTodaySaleSkuList').then((res)=>{
+    //     initList(res.data.page.data)
+    //   })
+    // }
   }
   componentDidMount(){
     console.log(this.props)
@@ -22,7 +24,7 @@ class App extends Component{
 
     return(
       <div>
-        this is the app.
+        <h1> 商品列表</h1>
         {
           list.map((item, index)=>{
             return (<p key={item.skuId}>
